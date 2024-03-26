@@ -54,7 +54,13 @@ public class MainMath {
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA TRES");
 
+        System.out.print("Ingrese la base: ");
+        double base = scanner.nextDouble();
         
+        System.out.print("Ingrese el exponente: ");
+        double exponente = scanner.nextDouble();
+        
+        PotenciaRaiz.calcularPotenciaYRaiz(base, exponente);
         
         salir = Condicional.preguntarSalir(scanner);
                 
@@ -63,6 +69,18 @@ public class MainMath {
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA 4");
         
+        System.out.print("Ingrese el valor mínimo del rango: ");
+        int minimo = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor máximo del rango: ");
+        int maximo = scanner.nextInt();
+
+        if (minimo <= maximo) {
+           
+            NumAleatorios.generarNumeroAleatorioEnRango(minimo, maximo);
+        } else {
+            System.out.println("Error: El valor mínimo debe ser menor o igual que el valor máximo.");
+        }
         
         
         salir = Condicional.preguntarSalir(scanner);
