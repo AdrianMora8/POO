@@ -73,7 +73,9 @@ public class MainMath {
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA 5");
         
-     
+        System.out.print("Ingresa un ángulo en grados: ");
+        double anguloGrados = scanner.nextDouble();
+        FunTriginometricas.mostrarResultados(anguloGrados);
        
         salir = Condicional.preguntarSalir(scanner);
                 
