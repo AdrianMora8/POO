@@ -7,25 +7,25 @@ public class MainMath {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        boolean condicion = false;
-        String salida;
+        boolean salir = false;
+        
         
         do {            
             
         System.out.println("Escoja el programa a usar:"
-                + "\n 1. Longitud de Cadenas"
-                + "\n 2. Mayúsculas y Minúsculas"
-                + "\n 3. Comparación de Cadenas"
-                + "\n 4. Extracción de Subcadenas"
-                + "\n 5. Reemplazo de Caracteres"
-                + "\n 6. Conteo de Palabras");
+                + "\n 1. Valor Absoluto"
+                + "\n 2. Redondeo y Truncado"
+                + "\n 3. Potencia y Raíz Cuadrada"
+                + "\n 4. Números Aleatorios"
+                + "\n 5. Funciones Trigonométricas"
+                + "\n 6. Logaritmo Natural");
         
         int var = scanner.nextInt();
         scanner.nextLine();
         
         switch (var) {
             case 1:
-                System.out.println("---------------------------------------");
+        System.out.println("---------------------------------------");
         System.out.println("PROGRAMA UNO");
         
         System.out.print("Ingresa un número: ");
@@ -33,30 +33,20 @@ public class MainMath {
 
         double absoluteValue = ValAbsoluto.calcValAbsoluto(number);
         System.out.println("El valor absoluto de " + number + " es: " + absoluteValue);
+        scanner.nextLine();
         
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true;
+        salir = Condicional.preguntarSalir(scanner);
                 break;
                 
             case 2:
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA DOS");
+        
         System.out.println("Ingrese un numero decimal: ");
         double numeroDecimal = scanner.nextDouble();
         Redondeo.mostrarRespuesta(numeroDecimal);
         
-        
-        
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true; 
+        salir = Condicional.preguntarSalir(scanner);
                 break;
                 
             case 3:
@@ -66,48 +56,34 @@ public class MainMath {
 
         
         
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true;
+        salir = Condicional.preguntarSalir(scanner);
                 
                 break;
             case 4:
-             System.out.println("---------------------------------------");
+        System.out.println("---------------------------------------");
         System.out.println("PROGRAMA 4");
         
         
         
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true;
+        salir = Condicional.preguntarSalir(scanner);
                 break;
                 
             case 5:
                 
+        System.out.println("---------------------------------------");
+        System.out.println("PROGRAMA 5");
         
-        
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
+     
        
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true;
-
+        salir = Condicional.preguntarSalir(scanner);
                 
                 break;
             case 6:
         
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA 6");
+        
         System.out.println("Ingrese un numero entero positivo: ");
-
         try {
             int numeroPositivo = scanner.nextInt();
             if (numeroPositivo <= 0) {
@@ -117,23 +93,14 @@ public class MainMath {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
-
+        salir = Condicional.preguntarSalir(scanner);
     
-        
-        
-        System.out.println("Salir (Y/N)");
-        salida = scanner.nextLine();
-        if (salida.equalsIgnoreCase("y")) {
-            condicion = false;
-        }else 
-            condicion=true;
-       
                 break;
             default:
                 throw new AssertionError();
             }
         
-        } while (condicion == true);
+        } while (salir == true);
     }
 }
 
