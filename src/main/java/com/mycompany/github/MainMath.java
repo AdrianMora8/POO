@@ -45,6 +45,9 @@ public class MainMath {
             case 2:
         System.out.println("---------------------------------------");
         System.out.println("PROGRAMA DOS");
+        System.out.println("Ingrese un numero decimal: ");
+        double numeroDecimal = scanner.nextDouble();
+        Redondeo.mostrarRespuesta(numeroDecimal);
         
         
         
@@ -100,6 +103,22 @@ public class MainMath {
                 
                 break;
             case 6:
+        
+        System.out.println("---------------------------------------");
+        System.out.println("PROGRAMA 6");
+        System.out.println("Ingrese un numero entero positivo: ");
+
+        try {
+            int numeroPositivo = scanner.nextInt();
+            if (numeroPositivo <= 0) {
+                throw new IllegalArgumentException("El valor debe ser un entero positivo.");
+            }
+            LogaritmoNatural.mostrarRespuesta(numeroPositivo);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+    
         
         
         System.out.println("Salir (Y/N)");
