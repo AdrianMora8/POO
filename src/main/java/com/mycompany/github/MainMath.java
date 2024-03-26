@@ -8,7 +8,7 @@ package com.mycompany.github;
  *
  * @author adrian
  */
-public class Github {
+public class MainMath {
 
     public static void main(String[] args) {
         System.out.println("Hola Mundo");
