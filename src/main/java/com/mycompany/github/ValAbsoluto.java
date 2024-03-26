@@ -9,6 +9,7 @@ package com.mycompany.github;
  * @author adrian
  */
 public class ValAbsoluto {
-      int master;
-      String holaaaaaa;
+       public static double calcValAbsoluto(double number) {
+        return Math.abs(number);
+       }
 }
