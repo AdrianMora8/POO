@@ -10,4 +10,5 @@ package com.mycompany.github;
  */
 public class ValAbsoluto {
       int master;
+      String hola;
 }
